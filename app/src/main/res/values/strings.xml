@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">LambdaTimer</string>
+    <string name="stats">Statistics</string>
+    <string name="custom">Custom</string>
+    <string name="timer">Timer</string>
+    <string name="saved">Saved</string>
+    <string name="settings">Settings</string>
+    <string name="none">\n</string>
+
+    <string name="main_txt">\nChoose your Timer</string>
+    <string name="work_time">Work time</string>
+    <string name="break_time">Break time</string>
+    <string name="bb_time">Big break time</string>
+    <string name="after_txt">Big break after break through</string>
+    <string name="start_timer">Start timer</string>
+    <string name="save_timer">Save timer</string>
+
+    <string name="good_m">Good Morning</string>
+    <string name="good_a">Good Afternoon</string>
+    <string name="good_e">Good Evening</string>
+    <string name="good_n">Good Night</string>
+    <string name="not_choose">You have not selected Work time and Break Time</string>
+
+    <string name="time">00:00</string>
+    <string name="work">Work</string>
+    <string name="_break">Break</string>
+    <string name="big_break">Big Break</string>
+    <string name="taptopause">Tap on screen for pause timer</string>
+    <string name="wait">Please wait!</string>
+
+    <string name="channelOnTick">Timer onTick</string>
+    <string name="channelOnFin">Timer onFinish</string>
+
+    <string name="productive_m">Have a productive Morning</string>
+    <string name="productive_a">Have a productive Afternoon</string>
+    <string name="productive_e">Have a productive Evening</string>
+    <string name="productive_n">Have a productive Night</string>
+    <string name="any_timer">Timer for anything\n</string>
+
+    <string name="error">Wrong format</string>
+    <string name="error_i">Too much time</string>
+    <string name="error_toast">There are errors in the fields</string>
+    <string name="error_n">Value is empty or 0</string>
+    <string name="warning_toast">Format: 45:00 or 4:00 or 45 (minute)</string>
+
+    <string name="enter_tag">Enter a tag for the timer</string>
+    <string name="edit">EDIT</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+    <string name="del">DELETE</string>
+</resources>

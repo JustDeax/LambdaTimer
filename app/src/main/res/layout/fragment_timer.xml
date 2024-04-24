@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".fragments.TimerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/main_txt"
+            style="@style/mainTxt"
+            app:layout_constraintBottom_toTopOf="@+id/txt1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/top_gradient"
+            style="@style/top_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gradient" />
+
+        <ImageView
+            android:id="@+id/bottom_gradient"
+            style="@style/bottom_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/gradient" />
+
+        <LinearLayout
+            android:id="@+id/txt1"
+            style="@style/linearLayout"
+            app:layout_constraintBottom_toTopOf="@+id/picker1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/work_txt"
+                style="@style/pickerText"
+                android:text="@string/work_time" />
+
+            <Space style="@style/space" />
+
+            <TextView
+                android:id="@+id/break_txt"
+                style="@style/pickerText"
+                android:text="@string/break_time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/picker1"
+            style="@style/linearLayout"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/txt2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <NumberPicker
+                android:id="@+id/work_picker_minute"
+                style="@style/numberPicker" />
+
+            <TextView style="@style/textDot"/>
+
+            <NumberPicker
+                android:id="@+id/work_picker_second"
+                style="@style/numberPicker" />
+
+            <Space style="@style/space" />
+
+            <NumberPicker
+                android:id="@+id/break_picker_minute"
+                style="@style/numberPicker" />
+
+            <TextView style="@style/textDot"/>
+
+            <NumberPicker
+                android:id="@+id/break_picker_second"
+                style="@style/numberPicker" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txt2"
+            style="@style/linearLayout"
+            app:layout_constraintBottom_toTopOf="@+id/picker2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/bb_txt"
+                style="@style/pickerText"
+                android:text="@string/bb_time" />
+
+            <Space style="@style/space" />
+
+            <TextView
+                android:id="@+id/after_txt"
+                style="@style/pickerText"
+                android:text="@string/after_txt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/picker2"
+            style="@style/linearLayout"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <NumberPicker
+                android:id="@+id/bb_picker_minute"
+                style="@style/numberPicker" />
+
+            <TextView style="@style/textDot"/>
+
+            <NumberPicker
+                android:id="@+id/bb_picker_second"
+                style="@style/numberPicker" />
+
+            <NumberPicker
+                android:id="@+id/after_picker"
+                style="@style/numberPicker"
+                android:layout_marginStart="25dp"
+                android:layout_weight="0.3" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/save"
+            style="@style/imageBtn"
+            android:layout_width="60dp"
+            android:background="@drawable/ic_button"
+            android:contentDescription="@string/save_timer"
+            android:src="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/start"
+            style="@style/imageBtn"
+            android:background="@drawable/ic_button"
+            android:contentDescription="@string/start_timer"
+            android:src="@drawable/ic_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

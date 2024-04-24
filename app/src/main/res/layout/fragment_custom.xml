@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CustomFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/main_txt"
+            style="@style/mainTxt"
+            android:text="@string/any_timer"
+            app:layout_constraintBottom_toTopOf="@+id/work_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/top_gradient"
+            style="@style/top_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gradient" />
+
+        <ImageView
+            android:id="@+id/bottom_gradient"
+            style="@style/bottom_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/gradient" />
+
+        <EditText
+            android:id="@+id/work_edit"
+            style="@style/customTxt"
+            android:hint="45:00"
+            app:layout_constraintBottom_toTopOf="@id/break_edit"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/break_edit"
+            style="@style/customTxt"
+            android:hint="15:00"
+            app:layout_constraintBottom_toTopOf="@id/bb_edit"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/bb_edit"
+            style="@style/customTxt"
+            android:hint="00:00"
+            app:layout_constraintBottom_toTopOf="@id/after_edit"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/after_edit"
+            style="@style/customTxt"
+            android:layout_marginBottom="50dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintBottom_toTopOf="@id/save"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            style="@style/customDesc2"
+            android:text="@string/work_time"
+            app:layout_constraintBottom_toBottomOf="@+id/work_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/work_edit" />
+
+        <TextView
+            style="@style/customDesc2"
+            android:text="@string/break_time"
+            app:layout_constraintBottom_toBottomOf="@+id/break_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/break_edit" />
+
+        <TextView
+            style="@style/customDesc2"
+            android:text="@string/bb_time"
+            app:layout_constraintBottom_toBottomOf="@+id/bb_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bb_edit" />
+
+        <TextView
+            android:id="@+id/afterTxt"
+            style="@style/customDesc2"
+            android:enabled="false"
+            android:text="@string/after_txt"
+            app:layout_constraintBottom_toBottomOf="@+id/after_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/after_edit" />
+
+        <ImageButton
+            android:id="@+id/save"
+            style="@style/imageBtn"
+            android:layout_width="60dp"
+            android:background="@drawable/ic_button"
+            android:contentDescription="@string/save_timer"
+            android:src="@drawable/ic_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/start"
+            style="@style/imageBtn"
+            android:background="@drawable/ic_button"
+            android:contentDescription="@string/start_timer"
+            android:src="@drawable/ic_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/save"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
